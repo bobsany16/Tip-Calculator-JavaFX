@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="425.0" prefWidth="350.0" style="-fx-background-color: lightcyan;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TipCalController">
+	<children>
+		<Label layoutX="44.0" layoutY="45.0" prefHeight="33.0" prefWidth="308.0" text="Welcome...">
+			<font>
+				<Font name="Lucida Sans Demibold" size="21.0" />
+			</font>
+		</Label>
+		<Label layoutX="54.0" layoutY="152.0" prefHeight="40.0" prefWidth="85.0" text="Bill amount: " />
+		<Label layoutX="54.0" layoutY="183.0" prefHeight="40.0" prefWidth="85.0" text="Percent to tip:" />
+		<Label layoutX="54.0" layoutY="215.0" prefHeight="40.0" prefWidth="85.0" text="Round to:" />
+		<Button fx:id="calcButton" layoutX="49.0" layoutY="255.0" mnemonicParsing="false" onAction="#calculate" prefHeight="25.0" prefWidth="254.0" text="Calculate" />
+		<Label layoutX="54.0" layoutY="277.0" prefHeight="40.0" prefWidth="85.0" text="Tip is:" />
+		<Label layoutX="54.0" layoutY="314.0" prefHeight="40.0" prefWidth="85.0" text="Actual tip %:" />
+		<TextField fx:id="billAmtTextField" layoutX="139.0" layoutY="160.0" onAction="#handleBillAmount" prefHeight="25.0" prefWidth="165.0" promptText="(Ex: 0.00)" />
+		<TextField fx:id="percent2TipTextField" layoutX="139.0" layoutY="191.0" onAction="#handlePercent" prefHeight="25.0" prefWidth="165.0" promptText="(Ex: 00.00)" />
+		<TextField fx:id="roundTextField" layoutX="139.0" layoutY="223.0" onAction="#handleRound" prefHeight="25.0" prefWidth="165.0" promptText="(Ex: 0.00)" />
+		<TextField fx:id="outPutTipTextField" layoutX="139.0" layoutY="288.0" prefHeight="25.0" prefWidth="165.0" promptText="Your tip will appear here" />
+		<TextField fx:id="effPercentTextField" layoutX="139.0" layoutY="321.0" prefHeight="25.0" prefWidth="165.0" promptText="Your actual tip percent" />
+		<ImageView fitHeight="108.0" fitWidth="118.0" layoutX="204.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@tooltip.png" />
+			</image>
+		</ImageView>
+		<Label alignment="CENTER" contentDisplay="CENTER" layoutX="-20.0" layoutY="87.0" prefHeight="33.0" prefWidth="308.0" text="to Tip Calculator">
+			<font>
+				<Font name="Lucida Sans Demibold Italic" size="21.0" />
+			</font>
+		</Label>
+      <MenuBar prefHeight="25.0" prefWidth="352.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" text="This program helps you calculate tips more easily." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Version 1.0" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+	</children>
+</AnchorPane>
